@@ -1,0 +1,32 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" build-on-make="true" name="javafx_imf2db">
+    <output-path>$PROJECT_DIR$/out/artifacts/javafx_imf2db</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="sample.Main" />
+        <option name="description" value="" />
+        <option name="height" value="550" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="title" value="Imf2db" />
+        <option name="vendor" value="ALL" />
+        <option name="version" value="1.0" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="javafx_imf2db.jar">
+        <element id="module-output" name="javafx_imf2db" />
+      </element>
+      <element id="file-copy" path="$PROJECT_DIR$/lib/ojdbc14.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/lib/poi-3.17.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/lib/junit-4.12.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/lib/dom4j-2.0.2.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/lib/log4j-1.2.17.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/lib/poi-ooxml-3.17.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/lib/xmlbeans-2.6.0.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/lib/commons-codec-1.10.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/lib/commons-logging-1.2.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/lib/poi-ooxml-schemas-3.17.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/lib/commons-collections4-4.1.jar" />
+    </root>
+  </artifact>
+</component>
