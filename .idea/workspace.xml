@@ -82,11 +82,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="16" column="78" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="78" />
+            <state relative-caret-position="250">
+              <caret line="18" column="28" lean-forward="true" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -106,7 +106,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReadBigExcel.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ReadBigExcel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/importfile/ReadBigExcel.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="355">
@@ -167,8 +167,8 @@
       <file leaf-file-name="oracle_jdbc.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/importfile/oracle_jdbc.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1296">
-              <caret line="66" column="17" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="28" />
+            <state relative-caret-position="196">
+              <caret line="56" column="13" lean-forward="true" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -223,13 +223,13 @@
         <option value="$PROJECT_DIR$/src/fx_public/UnicodeReader.java" />
         <option value="$PROJECT_DIR$/src/importfile/ReadTXT_CSV.java" />
         <option value="$PROJECT_DIR$/src/sample/test.java" />
-        <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/sample/sample.fxml" />
         <option value="$PROJECT_DIR$/src/importfile/Imain.java" />
         <option value="$PROJECT_DIR$/src/importfile/DoExcel.java" />
         <option value="$PROJECT_DIR$/src/fx_public/OpenFileChooser.java" />
         <option value="$PROJECT_DIR$/src/sample/Controller.java" />
         <option value="$PROJECT_DIR$/src/importfile/ReadBigExcel.java" />
+        <option value="$PROJECT_DIR$/src/sample/Main.java" />
       </list>
     </option>
   </component>
@@ -260,7 +260,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
@@ -271,6 +271,11 @@
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="javafx_imf2db" type="cbb8eebc:String" user="javafx_imf2db" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="javafx_imf2db" type="cbb8eebc:String" user="javafx_imf2db" />
+              <item name="src" type="cbb8eebc:String" user="src" />
             </path>
           </expand>
           <select />
@@ -287,24 +292,6 @@
               <item name="javafx_imf2db" type="b2602c69:ProjectViewProjectNode" />
               <item name="javafx_imf2db" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="javafx_imf2db" type="b2602c69:ProjectViewProjectNode" />
-              <item name="javafx_imf2db" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="fx_public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="javafx_imf2db" type="b2602c69:ProjectViewProjectNode" />
-              <item name="javafx_imf2db" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="importfile" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="javafx_imf2db" type="b2602c69:ProjectViewProjectNode" />
-              <item name="javafx_imf2db" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -465,16 +452,15 @@
       <workItem from="1531499052244" duration="5148000" />
       <workItem from="1531620752230" duration="11478000" />
       <workItem from="1531750614410" duration="2459000" />
-      <workItem from="1531756260858" duration="4402000" />
+      <workItem from="1531756260858" duration="7986000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87620000" />
+    <option name="totallyTimeSpent" value="91204000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -486,11 +472,11 @@
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.32980332" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32561985" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32561985" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.3139183" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.3139183" />
       <window_info anchor="right" id="Database" order="3" weight="0.32980332" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" sideWeight="0.49509802" weight="0.24962178" />
@@ -948,13 +934,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/importfile/oracle_jdbc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1296">
-          <caret line="66" column="17" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fx_public/FXAlert.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
@@ -966,16 +945,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2376">
           <caret line="106" selection-start-line="106" selection-end-line="106" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="16" column="78" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="78" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1023,6 +992,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="355">
           <caret line="130" column="16" selection-start-line="130" selection-start-column="16" selection-end-line="130" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/importfile/oracle_jdbc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="56" column="13" lean-forward="true" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="18" column="28" lean-forward="true" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

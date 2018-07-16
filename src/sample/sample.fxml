@@ -33,7 +33,7 @@
           </Menu>
         </menus>
       </MenuBar>
-      <AnchorPane prefHeight="525.0" prefWidth="600.0" style="-fx-background-color: #2e2929;">
+      <AnchorPane prefHeight="540.0" prefWidth="600.0" style="-fx-background-color: #2e2929;">
          <children>
             <TextField fx:id="excelname" layoutX="83.0" layoutY="45.0" prefHeight="23.0" prefWidth="452.0" promptText="输入文件名,文件必须放在程序同一文件夹(输入all则根目录下文件都导入)" />
             <TextField fx:id="startrow" layoutX="83.0" layoutY="91.0" prefHeight="23.0" prefWidth="452.0" promptText="输入开始行号" text="1" />
