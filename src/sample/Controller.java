@@ -33,8 +33,7 @@ public class Controller implements Initializable {
     private StringBuffer results=new StringBuffer();
     private boolean exported=false;
 
-    @FXML
-    private TextArea textarea1;
+
     @FXML
     private TextField excelname;
 
@@ -49,22 +48,52 @@ public class Controller implements Initializable {
 
     @FXML
     private Button btn1;
+
+    @FXML
+    private TextArea textarea1;
+
     @FXML
     private Button btn2;
+
+
 
     @FXML
     void chofile(ActionEvent event) throws IOException {
         OpenFileChooser opfile=new OpenFileChooser();
         excelname.setText(opfile.open());
+       //opfile. openSaveDialog();
+       // excelname.setText(opfile.opendir());
         //System.out.printf("123");
     }
 
     @FXML
+    void openfile(ActionEvent event) throws IOException {
+        OpenFileChooser opfile=new OpenFileChooser();
+        excelname.setText(opfile.open());
+        //opfile. openSaveDialog();
+        // excelname.setText(opfile.opendir());
+        //System.out.printf("123");
+    }
+    @FXML
+    void opendir(ActionEvent event) throws IOException {
+        OpenFileChooser opfile=new OpenFileChooser();
+        excelname.setText(opfile.opendir());
+    }
+
+    @FXML
     void save(ActionEvent event) throws Exception {
+        //判断URL是否合法
+       if(! Imain.checkUrl(excelname.getText(), "^(.*\\.xls.?|.*\\.txt|.*\\.csv)")){
+           FXAlert.Alert_ERR("请检查路径是否正确或路径下是否有文件存在！","URL错误");
+           return ;
+       };
+
         //textarea1.setText(excelname.getCharacters().toString());
         Imain.importFile(excelname.getText(),Integer.parseInt(startrow.getText()) ,cellstr.getText(),dbtable.getText());
       //  System.setOut(printStream);
+
         FXAlert.Alert_Info("处理完成");
+        excelname.setText("");
     }
 
     @FXML

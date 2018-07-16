@@ -78,7 +78,7 @@ public class DoExcel {
         List<HashMap<String,String>> list=new ArrayList();
         String cellNO[]=cells.split(",");
         String cellValue = "";
-        for (int i=startrow-1;i<sheet.getLastRowNum();i++){
+        for (int i=startrow-1;i<sheet.getLastRowNum()+1;i++){
             HSSFRow row = sheet.getRow(i);
             HashMap<String,String>map=new HashMap<String, String>();
             for (int j=0;j<cellNO.length;j++){

@@ -64,6 +64,40 @@ public class Imain {
 
     }
 
+    public static boolean checkUrl(String filepath, String regex) {
+
+
+        try {
+            if (filepath.matches(regex)) {
+                File file = new File(filepath);
+                if (file.exists()) {
+                    return true;
+                }
+            } else {
+                File file = new File(filepath);
+                System.out.println("----------------");
+                String[] paths2 = file.list(new FilenameFilter() {
+                    private Pattern pattern = Pattern.compile(regex);
+
+                    @Override
+                    public boolean accept(File dir, String name) {
+                        return pattern.matcher(name).matches();
+                    }
+                });
+                if (paths2.length > 0) {
+                    return true;
+                } else {
+                    return false;
+                }
+
+            }
+        } catch (Exception e) {
+            return false;
+        }
+        return false;
+
+    }
+
     public static void importFile(String filename,
                                   int startrow,
                                   String cells,
@@ -71,16 +105,17 @@ public class Imain {
         oracle_jdbc db = new oracle_jdbc();
         db.TestConnection();
         db.getConnection();
-        cells=cells.replace("，",",");
-        if (!filename.equals("all")) {
+        final String regex = "^(.*\\.xls.?|.*\\.txt|.*\\.csv)";
+        cells = cells.replace("，", ",");
+        if (filename.matches(regex)) {
             insertDBBatch(startrow, cells, tablename, filename, db);
             db.close();
             return;
         }
 
-        File file = new File(System.getProperty("user.dir").toString());
+        //File file = new File(System.getProperty("user.dir").toString());
+        File file = new File(filename);
         System.out.println("----------------");
-        final String regex = "^(.*\\.xls.?|.*\\.txt|.*\\.csv)";
         String[] paths2 = file.list(new FilenameFilter() {
             private Pattern pattern = Pattern.compile(regex);
 
@@ -92,7 +127,7 @@ public class Imain {
         Arrays.sort(paths2, String.CASE_INSENSITIVE_ORDER);//排序
         for (String path : paths2) {
             System.out.println(path);
-            insertDBBatch(startrow, cells, tablename, path, db);
+            insertDBBatch(startrow, cells, tablename, filename + "\\" + path, db);
         }
 
         db.close();
@@ -159,10 +194,11 @@ public class Imain {
         Connection connection = null;
         PreparedStatement statement = null;
         DoExcel doexcel = new DoExcel();
-        String filepath=System.getProperty("user.dir").toString() + "\\" + filename;
-        if(filename.contains("/")||filename.contains("\\")){//如果传入的是文件路径的话
-            filepath=filename;
-        }
+        String filepath = System.getProperty("user.dir").toString() + "\\" + filename;
+//        if(filename.contains("/")||filename.contains("\\")){//如果传入的是文件路径的话
+//            filepath=filename;
+//        }
+        filepath = filename;//直接使用传入的文件路径
         ReadTXT_CSV readTXT_CSV = new ReadTXT_CSV();
         int count = 0;
         String sql;
