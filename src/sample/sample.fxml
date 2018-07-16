@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
@@ -22,7 +23,7 @@
         </Menu>
             <Menu mnemonicParsing="false" text="工具">
                 <items>
-                    <MenuItem mnemonicParsing="false" text="好吧!这里也想不到要写什么!还是看看帮助吧" />
+                    <MenuItem mnemonicParsing="false" onAction="#dbconf" text="数据库配置" />
                 </items>
             </Menu>
           <Menu mnemonicParsing="false" text="帮助">
@@ -45,7 +46,10 @@
             <Label layoutX="83.0" layoutY="176.0" prefHeight="15.0" prefWidth="452.0" text="数据库表名" textFill="#c6c1c1" />
             <Button fx:id="btn2" layoutX="83.0" layoutY="237.0" mnemonicParsing="false" onAction="#chofile" prefHeight="23.0" prefWidth="80.0" text="选择文件" />
             <Label layoutX="83.0" layoutY="14.0" prefHeight="31.0" prefWidth="452.0" text="方式1:打开--&gt;文件夹 ，文件夹下支持的文件类型都导入                                          方式2:点击按钮&quot;选择文件&quot;或打开--&gt;文件          注意文本格式的各列要逗号分隔" textFill="#d0cccc" wrapText="true" />
-            <Label layoutX="26.0" layoutY="456.0" prefHeight="48.0" prefWidth="549.0" text="说明:文件支持excel xls,xlsx格式,  文本csv,txt格式 gbk,utf-8字符集.                                                    数据库配置文件程序根目录oracle.properties 如果没有自行新建                                                          格式:url=jdbc:oracle:thin:@10.134.1.1:1521:sid user=xxx password=xxx            有问题联系maoxj" textFill="#ae6868" wrapText="true" />
+            <Label layoutX="26.0" layoutY="456.0" prefHeight="15.0" prefWidth="549.0" text="说明:文件支持excel xls,xlsx格式,  文本csv,txt格式 gbk,utf-8字符集" textFill="#ae6868" wrapText="true" />
+            <Label layoutX="26.0" layoutY="471.0" prefHeight="15.0" prefWidth="480.0" text="数据库配置文件程序根目录oracle.properties " textFill="#ae6868" />
+            <Label layoutX="26.0" layoutY="486.0" prefHeight="15.0" prefWidth="426.0" text="点击 工具--&gt;数据库配置  如果找不到文件程序会自动生成.打开方式为文本 " textFill="#ae6868" />
+            <Hyperlink layoutX="535.0" layoutY="483.0" onAction="#hyperlink1click" text="关于" textFill="#c1e814" />
          </children>
       </AnchorPane>
    </children>

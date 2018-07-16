@@ -90,9 +90,9 @@ public class ReadBigExcel extends DefaultHandler{
             int i;
             // c => cell
             if(name.equals("c")) {
-                System.out.print(colnum);
+               // System.out.print(colnum);
                 // Print the cell reference
-                System.out.print(attributes.getValue("r") + " --- ");
+                //System.out.print(attributes.getValue("r") + " --- ");
                 i=Integer.parseInt(attributes.getValue("r").replaceAll("[A-Z]",""));
 
 
@@ -128,7 +128,7 @@ public class ReadBigExcel extends DefaultHandler{
             // v => contents of a cell
             // Output after we've seen the string contents
             if(name.equals("v")) {
-                System.out.println(lastContents+" hhh");
+              //  System.out.println(lastContents+" hhh");
             }
 
             if(colnum>0) {

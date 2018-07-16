@@ -28,11 +28,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Controller implements Initializable {
-    private volatile  Service<String>backgroundThread;
-    private boolean updated=false;
-    private StringBuffer results=new StringBuffer();
-    private boolean exported=false;
-
 
     @FXML
     private TextField excelname;
@@ -56,41 +51,42 @@ public class Controller implements Initializable {
     private Button btn2;
 
 
-
     @FXML
     void chofile(ActionEvent event) throws IOException {
-        OpenFileChooser opfile=new OpenFileChooser();
-        excelname.setText(opfile.open());
-       //opfile. openSaveDialog();
-       // excelname.setText(opfile.opendir());
-        //System.out.printf("123");
-    }
-
-    @FXML
-    void openfile(ActionEvent event) throws IOException {
-        OpenFileChooser opfile=new OpenFileChooser();
+        OpenFileChooser opfile = new OpenFileChooser();
         excelname.setText(opfile.open());
         //opfile. openSaveDialog();
         // excelname.setText(opfile.opendir());
         //System.out.printf("123");
     }
+
+    @FXML
+    void openfile(ActionEvent event) throws IOException {
+        OpenFileChooser opfile = new OpenFileChooser();
+        excelname.setText(opfile.open());
+        //opfile. openSaveDialog();
+        // excelname.setText(opfile.opendir());
+        //System.out.printf("123");
+    }
+
     @FXML
     void opendir(ActionEvent event) throws IOException {
-        OpenFileChooser opfile=new OpenFileChooser();
+        OpenFileChooser opfile = new OpenFileChooser();
         excelname.setText(opfile.opendir());
     }
 
     @FXML
     void save(ActionEvent event) throws Exception {
         //判断URL是否合法
-       if(! Imain.checkUrl(excelname.getText(), "^(.*\\.xls.?|.*\\.txt|.*\\.csv)")){
-           FXAlert.Alert_ERR("请检查路径是否正确或路径下是否有文件存在！","URL错误");
-           return ;
-       };
+        if (!Imain.checkUrl(excelname.getText(), "^(.*\\.xls.?|.*\\.txt|.*\\.csv)")) {
+            FXAlert.Alert_ERR("请检查路径是否正确或路径下是否有文件存在！", "URL错误");
+            return;
+        }
+        ;
 
         //textarea1.setText(excelname.getCharacters().toString());
-        Imain.importFile(excelname.getText(),Integer.parseInt(startrow.getText()) ,cellstr.getText(),dbtable.getText());
-      //  System.setOut(printStream);
+        Imain.importFile(excelname.getText(), Integer.parseInt(startrow.getText()), cellstr.getText(), dbtable.getText());
+        //  System.setOut(printStream);
 
         FXAlert.Alert_Info("处理完成");
         excelname.setText("");
@@ -104,7 +100,7 @@ public class Controller implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        ConsoleToTextarea aa=new ConsoleToTextarea();
+        ConsoleToTextarea aa = new ConsoleToTextarea();
 
         try {
             aa.setupConsoleOutput(textarea1);
@@ -116,7 +112,28 @@ public class Controller implements Initializable {
 
     }
 
-
+    @FXML
+    void dbconf(ActionEvent event) throws IOException {
+        OpenFileChooser open=new OpenFileChooser();
+        File file = new File(System.getProperty("user.dir").toString()
+                + "\\oracle.properties");
+        if(file.exists()){
+            open.openFile(file);
+        }else {
+            file.createNewFile();
+            FileOutputStream out=new FileOutputStream(file);
+            PrintStream ps= new PrintStream(out, true,"utf-8");
+            ps.println("url=jdbc:oracle:thin:@192.168.1.1:1521:sid");
+            ps.println("user=xxx");
+            ps.println("password=xxx");
+            ps.close();
+            open.openFile(file);
+        }
+    }
+    @FXML
+    void hyperlink1click(ActionEvent event) throws Exception{
+        getAuthorInfo(event);
+    }
 
 
 }

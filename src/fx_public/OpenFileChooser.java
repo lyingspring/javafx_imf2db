@@ -44,7 +44,7 @@ public class OpenFileChooser {
         return path;
     }
 
-    private void openFile(File file) {
+    public void openFile(File file) {
         EventQueue.invokeLater(() -> {
             try {
                 desktop.open(file);
