@@ -226,6 +226,9 @@ public class Imain {
 
             for (int j = 0; j < list.get(i).size(); j++) {
                 statement.setString(j + 1, list.get(i).get("cell" + j));
+                if(j>data.getColumnCount()-1){
+                    break;//如果插入的列数大于数据库表的列数跳出
+                }
             }
             for (int j = 0; j < data.getColumnCount() - list.get(i).size(); j++) {
                 statement.setString(list.get(i).size() + j + 1, "");
@@ -246,6 +249,11 @@ public class Imain {
 
         System.out.println(filename + "插入完成，共" + count + "条 " + (end - begin) + "ms");
         System.out.println("累计插入共" + allcount + "条");
+        list.clear();
+        list=null;
+        //通知系统进行垃圾回收
+        System.gc();
+        System.runFinalization();
 
     }
 

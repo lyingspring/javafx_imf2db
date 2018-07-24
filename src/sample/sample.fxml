@@ -42,7 +42,7 @@
             <Button fx:id="btn1" layoutX="218.0" layoutY="237.0" mnemonicParsing="false" onAction="#save" prefHeight="23.0" prefWidth="128.0" text="导入" />
             <TextArea fx:id="textarea1" layoutX="26.0" layoutY="270.0" prefHeight="169.0" prefWidth="549.0" />
             <Label layoutX="83.0" layoutY="76.0" prefHeight="15.0" prefWidth="452.0" text="输入开始行号" textFill="#cdc9c9" />
-            <Label layoutX="83.0" layoutY="128.0" prefHeight="15.0" prefWidth="452.0" text="输入需导入源文件的列号，用逗号分隔" textFill="#c9c2c2" />
+            <Label layoutX="83.0" layoutY="128.0" prefHeight="15.0" prefWidth="452.0" text="输入需导入源文件的列号，用逗号分隔。导入所有列请输入all" textFill="#c9c2c2" />
             <Label layoutX="83.0" layoutY="176.0" prefHeight="15.0" prefWidth="452.0" text="数据库表名" textFill="#c6c1c1" />
             <Button fx:id="btn2" layoutX="83.0" layoutY="237.0" mnemonicParsing="false" onAction="#chofile" prefHeight="23.0" prefWidth="80.0" text="选择文件" />
             <Label layoutX="83.0" layoutY="14.0" prefHeight="31.0" prefWidth="452.0" text="方式1:打开--&gt;文件夹 ，文件夹下支持的文件类型都导入                                          方式2:点击按钮&quot;选择文件&quot;或打开--&gt;文件          注意文本格式的各列要逗号分隔" textFill="#d0cccc" wrapText="true" />
